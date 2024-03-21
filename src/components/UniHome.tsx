@@ -12,14 +12,17 @@ const UniHome = () => {
         </video>
       </div>
       <div className="absolute left-10">
-      <h1 className="text-white z-1 text-3xl md:text-6xl  mx-auto py-10 md:py-10">Unicago Sense(1)</h1>
-      <div className="max-w-[40vw]">
-      <span className="text-xl md:text-2xl">Smartphones haven't changed for a long time, let's change it once and for all.</span>
-      </div>
-      
+        <h1 className="text-white z-1 text-3xl md:text-6xl  mx-auto py-10 md:py-10">
+          Unicago Sense(1)
+        </h1>
+        <div className="max-w-[40vw]">
+          <span className="text-xl md:text-2xl">
+            Smartphones haven't changed for a long time, let's change it once
+            and for all.
+          </span>
+        </div>
       </div>
       {/* Other content can be added on top of the video */}
-      
     </div>
   );
 };

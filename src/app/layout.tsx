@@ -21,8 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="relative w-full flex items-center "></div>
       <Navbar/>
-      <UniLogo><img src="./uni-logo.svg" alt=""  style={{height:"24px"}}/></UniLogo>
-      <UniLogo><img src="./uni-logo.svg" alt=""  style={{height:"24px"}}/></UniLogo>
+      <UniLogo redirect="/"><img src="./uni-logo.svg" alt=""  style={{height:"24px"}}/></UniLogo>
         {children}</body>
     </html>
   );
