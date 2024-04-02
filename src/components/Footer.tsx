@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const Footer = () => {
   return (
     
@@ -9,7 +10,7 @@ const Footer = () => {
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
               <a href="/" className="flex items-center ">
-                  <img src="./uni-logo-white.svg"  className="h-8 me-4 fill-white" alt="Unicago Logo" />
+                  <img src="/uni-logo-white.svg"  className="h-8 me-4 fill-white" alt="Unicago Logo" />
                   <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Unicago</span>
               </a>
           </div>
