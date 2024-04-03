@@ -1,14 +1,21 @@
 import React from "react";
 
-const SixthSection = () => {
+interface Props {
+  content: {
+    title: string;
+    description: string;
+  };
+}
+
+const SixthSection: React.FC<Props> = ({content}) => {
   return (
     <div className="relative flex flex-row flex-between px-[8rem] py-20 min-h-min bg-gray-900">
       <div className="md:min-w-[80%]">
         <h2 className="  text-3xl text-left md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-          Supercharge Your Startup's Growth
+          {content.title}
         </h2>
         <h3 className=" text-xl text-left md:text-xl font-bold bg-clip-text  text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-2">
-          Unlock the Potential of Your Startup with Unicago
+          {content.description}
         </h3>
       </div>
       <div className="flex flex-col justify-center items-center py-2 space-y-4 space-x-0 ">

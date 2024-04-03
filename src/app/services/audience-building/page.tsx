@@ -1,9 +1,9 @@
 import React from "react";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
-import marketResearchData from "@/data/market-research-analysis.json";
+import audienceBuildingData from "@/data/audience-building.json";
 
 const MarketResearchPage = () => {
-  return <ServicePageTemplate data={marketResearchData} />;
+  return <ServicePageTemplate data={audienceBuildingData} />;
 };
 
 export default MarketResearchPage;

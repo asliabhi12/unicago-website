@@ -9,7 +9,7 @@ function Navbar({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "fixed hidden sm:flex bottom-10 right-[150px] max-w-xl mx-auto  z-[1000]  ",
+        "fixed md:block hidden bottom-10 right-[150px] max-w-xl mx-auto  z-[1000]  ",
         className
       )}
     >

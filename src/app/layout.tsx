@@ -4,7 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import UniLogo from "@/components/ui/NavSingleContainer";
 import Image from "next/image";
-import HamburgerMenu from "@/components/HamburgerMenu";
+import HamburgerMenu from "@/components/ui/HamburgerMenu";
+import HamBurgerIcon from "@/components/MobileNavMenu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="relative w-full flex items-center "></div>
         <Navbar />
+        <HamBurgerIcon/>
         
         
         <UniLogo redirect="/">

@@ -1,17 +1,22 @@
 import React from "react";
 import Image from "next/image";
 
-const FifthSection = () => {
+interface Props {
+  content: {
+    title: string;
+    description: string;
+  };
+}
+
+const FifthSection: React.FC<Props> = ({ content })  => {
   return (
     <div className="relative flex flex-row justify-around  min-h-min px-20 py-20">
       <div className="w-1/2 ">
         <h2 className="  text-3xl text-left md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-          Gain Insight into Your Competitors
+          {content.title}
         </h2>
         <p className="py-2">
-          Our competitive analysis helps you understand the strengths and
-          weaknesses of your competitors, enabling you to make informed business
-          decisions.
+          {content.description}
         </p>
         <div className="relative flex flex-col md:flex-row justify-around mt-10 min-h-min gap-5   ">
           
