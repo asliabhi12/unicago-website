@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface ThirdSectionData {
@@ -20,7 +21,7 @@ const ThirdSection: React.FC<{ content: ThirdSectionData }> = ({ content }) => {
       <div className="relative flex flex-col md:flex-row justify-around mt-10 min-h-min gap-5">
         {content.subgroups.map((subgroup) => (
           <div key={subgroup.id} className="p-10 rounded-lg flex flex-col justify-center items-center bg-gray-900 text-center">
-            <img src="/assets/analysis.svg" style={{ height: "50px", width: "50px", fill: "white" }} alt="hello" />
+            <Image src="/assets/analysis.svg" style={{ fill: "white" }} height={50} width={50} alt="hello" />
             <div className="mt-5 text-xl">{subgroup.title}</div>
             <div className="mt-5"><p>{subgroup.subtitle}</p></div>
           </div>

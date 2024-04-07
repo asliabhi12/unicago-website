@@ -28,7 +28,7 @@ export default function RootLayout({
         
         
         <UniLogo redirect="/">
-          <img src="/uni-logo.svg" alt="uni-logo" height="24" width="24" />
+          <Image src="/uni-logo.svg" alt="uni-logo" height={24} width={24} />
         </UniLogo>
 
 

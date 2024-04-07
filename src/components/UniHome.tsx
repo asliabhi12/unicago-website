@@ -17,8 +17,8 @@ const UniHome = () => {
         </h1>
         <div className="max-w-[40vw]">
           <span className="text-xl md:text-2xl">
-            Smartphones haven't changed for a long time, let's change it once
-            and for all.
+            Smartphones haven&apos;t changed for a long time, let&apos;s change
+            it once and for all.
           </span>
         </div>
       </div>

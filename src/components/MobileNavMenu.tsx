@@ -3,11 +3,12 @@
 import React, { useState } from "react";
 import HamburgerMenu from "./ui/HamburgerMenu";
 import DropDownMenu from "./DropDownMenu";
+import Image from "next/image";
 
 
 const MobileNav = () => {
   const [menu, setMenu] = useState(false);
-  const [openMenu, setOpenMenu] = useState(null);
+  const [openMenu, setOpenMenu] = useState<"Products" | "Services" | "Industries" | null>(null);
 
   const hamBurgerClick = () => {
     setMenu(!menu);
@@ -27,9 +28,10 @@ const MobileNav = () => {
         <HamburgerMenu />
       </div>
       <div className="absolute bottom-0 mb-4 right-5">
-        <a href="/"><img
+        <a href="/"><Image
           src="/uni-logo-white.svg"
-          style={{ height: "24px", width: "24px" }}
+          width={24}
+          height={24}
           alt="uni"
         /></a>
         
@@ -49,7 +51,7 @@ const MobileNav = () => {
         {"title": "1for1","href":"#"},    
         {"title": "Homie","href":"#"},    
       ]}
-      onClick={() => setOpenMenu(openMenu === "Products" ? null : "Products")}
+      onClick={() => setOpenMenu(prevOpenMenu => prevOpenMenu === "Products" ? null : "Products")}
       openMenu={openMenu}
         />
       </li>
@@ -71,9 +73,9 @@ const MobileNav = () => {
           openMenu={openMenu}
         />
       </li>
-      <li>
+      {/* <li>
       <DropDownMenu
-          menuTitle="Industies"
+          menuTitle="Industries"
           menuItems={[
         { "title": "Fintech", "href": "#" },
         {"title": "Healthcare", "href":"#"},
@@ -85,7 +87,7 @@ const MobileNav = () => {
       openMenu={openMenu}
       
         />
-    </li>
+    </li> */}
 
     
     </ul>

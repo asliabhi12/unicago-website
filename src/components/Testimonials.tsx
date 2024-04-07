@@ -34,57 +34,58 @@ export const Highlight = ({
 };
 
 const CARDS = [
-    {
-      id: 0,
-      name: "Alice Thompson",
-      designation: "Founder & CEO, Ferero",
-      content: (
-        <p>
-          "Unicago's growth has been fueled by Unicago's expertise in <Highlight>Market Research</Highlight> and <Highlight>Audience Building</Highlight>, guiding our strategic decisions and driving customer engagement."
-        </p>
-      ),
-    },
-    {
-      id: 1,
-      name: "John Smith",
-      designation: "Co-Founder, Fantasia",
-      content: (
-        <p>
-          "Unicago's swift <Highlight>MVP Development</Highlight> helped us validate our concept and attract early adopters, setting the foundation for Unicago's success."
-        </p>
-      ),
-    },
-    {
-      id: 2,
-      name: "Emily Johnson",
-      designation: "CTO, Fandomania",
-      content: (
-        <p>
-          "Unicago's platform usability and appeal were greatly enhanced by Unicago's <Highlight>UI/UX Design</Highlight> and Prototyping services, driving higher user engagement."
-        </p>
-      ),
-    },
-    {
-      id: 3,
-      name: "David Brown",
-      designation: "Head of Marketing, Maniaka",
-      content: (
-        <p>
-          "Thanks to Unicago's <Highlight>Product Marketing</Highlight> expertise, we've seen increased brand awareness and customer acquisition, propelling Unicago's growth trajectory."
-        </p>
-      ),
-    },
-    {
-      id: 4,
-      name: "Michael Garcia",
-      designation: "Lead Developer, Humar",
-      content: (
-        <p>
-          "Unicago's <Highlight>Web Development</Highlight> services have provided Unicago with a scalable and robust platform, ensuring we meet our users' evolving needs."
-        </p>
-      ),
-    },
-  ];
+  {
+    id: 0,
+    name: "Alice Thompson",
+    designation: "Founder & CEO, Ferero",
+    content: (
+      <p>
+        &quot;Unicago&apos;s growth has been fueled by Unicago&apos;s expertise in <Highlight>Market Research</Highlight> and <Highlight>Audience Building</Highlight>, guiding our strategic decisions and driving customer engagement.&quot;
+      </p>
+    ),
+  },
+  {
+    id: 1,
+    name: "John Smith",
+    designation: "Co-Founder, Fantasia",
+    content: (
+      <p>
+        &quot;Unicago&apos;s swift <Highlight>MVP Development</Highlight> helped us validate our concept and attract early adopters, setting the foundation for Unicago&apos;s success.&quot;
+      </p>
+    ),
+  },
+  {
+    id: 2,
+    name: "Emily Johnson",
+    designation: "CTO, Fandomania",
+    content: (
+      <p>
+        &quot;Unicago&apos;s platform usability and appeal were greatly enhanced by Unicago&apos;s <Highlight>UI/UX Design</Highlight> and Prototyping services, driving higher user engagement.&quot;
+      </p>
+    ),
+  },
+  {
+    id: 3,
+    name: "David Brown",
+    designation: "Head of Marketing, Maniaka",
+    content: (
+      <p>
+        &quot;Thanks to Unicago&apos;s <Highlight>Product Marketing</Highlight> expertise, we&apos;ve seen increased brand awareness and customer acquisition, propelling Unicago&apos;s growth trajectory.&quot;
+      </p>
+    ),
+  },
+  {
+    id: 4,
+    name: "Michael Garcia",
+    designation: "Lead Developer, Humar",
+    content: (
+      <p>
+        &quot;Unicago&apos;s <Highlight>Web Development</Highlight> services have provided Unicago with a scalable and robust platform, ensuring we meet our users&apos; evolving needs.&quot;
+      </p>
+    ),
+  },
+];
+
   
 
 // const CARDS = [

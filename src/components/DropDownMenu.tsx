@@ -10,12 +10,11 @@ type MenuItem = {
 };
 
 interface Props {
-  menuTitle: string;
-  menuItems: MenuItem[]; // Ensure that menuItems is of type MenuItem[]
-  openMenu: string | null;
-  onClick: () => void; // Add onClick prop
+  menuTitle: "Products" | "Services" | "Industries"; // Update menuTitle to accept specific values
+  menuItems: MenuItem[];
+  openMenu: "Products" | "Services" | "Industries" | null; // Update openMenu to accept specific values
+  onClick: () => void;
 }
-
 function DropDownMenu({onClick, menuTitle, menuItems, openMenu }: Props) {
   const isOpen = openMenu === menuTitle;
   const [submenus, setSubmenus] = useState<{ [key: string]: boolean }>({});
