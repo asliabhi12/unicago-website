@@ -1,60 +1,42 @@
-import React, { useState } from 'react';
+// NavMenu2.js
+import React from "react";
+import { MenuItem } from "./ui/navbar-menu";
+// Define the type for menuItems prop
+type MenuItem =
+  | { title: string; href: string }
+  | { title: string; submenu: SubmenuItem[]; href?: string };
 
-type Submenu = 'menu1' | 'menu2' | 'menu3';
-
-function NavMenu() {
-  const [activeSubmenu, setActiveSubmenu] = useState<Submenu | null>(null);
-
-  const openSubmenu = (submenu: Submenu) => {
-    setActiveSubmenu(submenu);
-  };
-
-  const closeSubmenu = () => {
-    setActiveSubmenu(null);
-  };
-
-  return (
-    <div>
-      {activeSubmenu ? (
-        <div>
-          {/* Submenu content */}
-          {activeSubmenu === 'menu1' && (
-            <div>
-              <h2>Menu 1 Submenu</h2>
-              <button onClick={closeSubmenu}>Back to Main Menu</button>
-              {/* Submenu 1 content */}
-            </div>
-          )}
-          {activeSubmenu === 'menu2' && (
-            <div>
-              <h2>Menu 2 Submenu</h2>
-              <button onClick={closeSubmenu}>Back to Main Menu</button>
-              {/* Submenu 2 content */}
-            </div>
-          )}
-          {activeSubmenu === 'menu3' && (
-            <div>
-              <h2>Menu 3 Submenu</h2>
-              <button onClick={closeSubmenu}>Back to Main Menu</button>
-              {/* Submenu 3 content */}
-            </div>
-          )}
-        </div>
-      ) : (
-        <ul>
-          <li>
-            <button onClick={() => openSubmenu('menu1')}>Menu 1</button>
-          </li>
-          <li>
-            <button onClick={() => openSubmenu('menu2')}>Menu 2</button>
-          </li>
-          <li>
-            <button onClick={() => openSubmenu('menu3')}>Menu 3</button>
-          </li>
-        </ul>
-      )}
-    </div>
-  );
+interface Props {
+  menuItems: MenuItem[];
 }
 
-export default NavMenu;
+
+interface SubmenuItem {
+  title: string;
+  href: string;
+  src?: string; // Assuming src is optional
+  description?: string; // Assuming description is optional
+}
+
+interface Props {
+  menuItems: MenuItem[];
+}
+
+const NavMenu2 = ({ menuItems }) => {
+  return (
+    <ul className="flex flex-col gap-10 space-y-2 ">
+      {menuItems.map((item, index) => (
+        <li key={index}>
+          {/* Render the main menu item */}
+          <MenuItem
+            title={item.title}
+            href={item.href}
+            submenu={item.submenu} // Pass the submenu array to the MenuItem component
+          />
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+export default NavMenu2;

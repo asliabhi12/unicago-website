@@ -2,19 +2,21 @@
 
 import React, { useState } from "react";
 import HamburgerMenu from "./ui/HamburgerMenu";
-import MobileNavMenu from "./MobileMenu";
-import NavMenu from "./Navmenu2";
+import DropDownMenu from "./DropDownMenu";
 
-const HamBurgerIcon = () => {
+
+const MobileNav = () => {
   const [menu, setMenu] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
+  const [openMenu, setOpenMenu] = useState(null);
 
   const hamBurgerClick = () => {
     setMenu(!menu);
   };
-  const toggleDropdown = () => {
-    setDropdown(!dropdown);
+
+  const closeMenus = () => {
+    setOpenMenu(null);
   };
+
   return (
     <div
       className={` ${
@@ -27,58 +29,73 @@ const HamBurgerIcon = () => {
       <div className="absolute bottom-0 mb-4 right-5">
         <a href="/"><img
           src="/uni-logo-white.svg"
-          style={{ height: "24px", width: "24px`" }}
+          style={{ height: "24px", width: "24px" }}
           alt="uni"
         /></a>
         
       </div>
       {menu && (
-        <div className="absolute inset-x-0 top-16  bg-gray-900 p-4">
-          <ul className="flex flex-col space-y-2">
-            <li>
-              <a href="/services">Services</a>
-            </li>
-            <li>
-              <a href="/services/market-research-analysis">Market Research and Analysis</a>
-            </li>
-            <li>
-              <a href="#">NavItem 3</a>
-            </li>
-            <li className="relative">
-              <button className="flex items-center" onClick={toggleDropdown}>
-                Dropdown
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className={`h-4 w-4 ml-1 transform ${dropdown ? 'rotate-180' : ''}`}
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 14l6-6H4l6 6z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button>
-              <MobileNavMenu/>
-              <NavMenu/>
-              {dropdown && <ul className="absolute left-0 top-full bg-gray-800 p-2">
-                <li>
-                  <a href="#">Dropdown Item 1</a>
-                </li>
-                <li>
-                  <a href="#">Dropdown Item 2</a>
-                </li>
-                <li>
-                  <a href="#">Dropdown Item 3</a>
-                </li>
-              </ul>}
-            </li>
-          </ul>
-        </div>
-      )}
+  <div className="absolute inset-x-0 top-16   p-4">
+    <ul className="flex flex-col gap-10 space-y-2 ">
+    <li>
+        <a href="/mission">Mission</a>
+      </li>
+      <li>
+      <DropDownMenu
+          menuTitle="Products"
+          menuItems={[
+        { "title": "Unicago Sense(1)", "href": "#" },
+        {"title": "ProjecktMJ", "href":"#"},
+        {"title": "1for1","href":"#"},    
+        {"title": "Homie","href":"#"},    
+      ]}
+      onClick={() => setOpenMenu(openMenu === "Products" ? null : "Products")}
+      openMenu={openMenu}
+        />
+      </li>
+      <li className="">
+        <DropDownMenu
+          menuTitle="Services"
+          menuItems={[
+        { "title": "Market Research and Analysis", "href": "/services/market-research-analysis" },
+        { "title": "Audience Building", "href": "/services/audience-building" },
+        { "title": "90 Days MVP Development", "href": "/services/90-day-mvp" },
+        { "title": "UI/UX Design & Prototyping", "href": "/services/ui-ux-design-and-prototyping" },
+        { "title": "Platform Technology Migration", "href": "/services/platform-technology-migration" },
+        { "title": "Product Marketing Setup", "href": "/services/product-marketing-setup" },
+        { "title": "Web Development", "href": "/services/web-development" },
+        { "title": "Search Engine Optimization", "href": "/services/search-engine-optimization" },
+        { "title": "Branding", "href": "/services/branding" },
+          ]}
+          onClick={() => setOpenMenu(openMenu === "Services" ? null : "Services")}
+          openMenu={openMenu}
+        />
+      </li>
+      <li>
+      <DropDownMenu
+          menuTitle="Industies"
+          menuItems={[
+        { "title": "Fintech", "href": "#" },
+        {"title": "Healthcare", "href":"#"},
+        {"title": "Retail","href":"#"},    
+        {"title": "Insurance","href":"#"},    
+        {"title": "Oil and Gas","href":"#"},    
+      ]}
+      onClick={() => setOpenMenu(openMenu === "Industries" ? null : "Industries")}
+      openMenu={openMenu}
+      
+        />
+    </li>
+
+    
+    </ul>
+  </div>
+)}
+
     </div>
   );
 };
 
-export default HamBurgerIcon;
+export default MobileNav;
+
+

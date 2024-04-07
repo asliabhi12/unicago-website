@@ -1,0 +1,143 @@
+// 
+//   <div className="absolute inset-x-0 top-16   p-4">
+//     <ul className="flex flex-col gap-10 space-y-2 ">
+//       <li>
+//         <a href="/services">Services</a>
+//       </li>
+//       <li>
+//         <a href="/services/market-research-analysis">Market Research and Analysis</a>
+//       </li>
+//       <li>
+//         <a href="#">NavItem 3</a>
+//       </li>
+//       <li className="">
+//         <DropDownMenu
+//           menuTitle="Menu 1"
+//           menuItems={[
+//             { title: "Services", link: "/services" },
+//             { title: "Market Research and Analysis", link: "/services/market-research-analysis" },
+//             { title: "NavItem 3", link: "#" }
+//           ]}
+//         />
+     
+        
+//       </li>
+//       <li>
+//         <a href="#">NavItem 3</a>
+//       </li>
+//     </ul>
+//   </div>
+// )}
+
+
+
+
+// {menu && (
+//   <div className="absolute inset-x-0 top-16   p-4">
+//     {/* Pass menuItems array as props to NavMenu2 */}
+//     <NavMenu2 menuItems={menuItems} />
+//   </div>
+// )}
+
+
+
+{/* <li>
+        <a href="/services/market-research-analysis">Market Research and Analysis</a>
+      </li>
+      <li>
+        <a href="#">NavItem 3</a>
+      </li>
+      <li className="">
+        <DropDownMenu
+          menuTitle="Menu 1"
+          menuItems={[
+            { title: "Services", link: "/services" },
+            { title: "Market Research and Analysis", link: "/services/market-research-analysis" },
+            { title: "NavItem 3", link: "#" }
+          ]}
+        />
+     
+        
+      </li>
+      <li>
+        <a href="#">NavItem 3</a>
+      </li> */}
+
+---- DropDownMenu
+
+import React, { useState } from "react";
+import "./ham-menu.css";
+
+type MenuItem = {
+  title: string;
+  href: string;
+  src?: string;
+  description?: string;
+  submenu?: MenuItem[];
+};
+
+interface Props {
+  menuTitle: string;
+  menuItems: MenuItem[]; // Ensure that menuItems is of type MenuItem[]
+  isOpen: boolean; // Add isOpen prop
+  onClick: () => void; // Add onClick prop
+}
+
+function DropDownMenu({isOpen, onClick, menuTitle, menuItems }: Props) {
+  const [submenus, setSubmenus] = useState<{ [key: string]: boolean }>({});
+
+  const toggleSubmenu = (menuTitle: string) => {
+    setSubmenus(prevState => ({
+      ...prevState,
+      [menuTitle]: !prevState[menuTitle]
+    }));
+  };
+
+  return (
+    <div className="">
+      <ul className="w-full">
+        <li className="relative ">
+          <button
+            className="flex items-center  "
+            onClick={() => {
+              toggleSubmenu(menuTitle); // Toggle the submenu when the button is clicked
+              onClick(); // Invoke the onClick function passed as prop
+            }}
+          >
+            {menuTitle}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className={`h-4 w-4 ml-1 transform ${
+                submenus[menuTitle] ? "rotate-180" : ""
+              }`}
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M10 14l6-6H4l6 6z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </button>
+          { submenus[menuTitle] && (
+            <ul
+              className={`flex flex-col gap-2 shadow-md py-2 ${
+                submenus[menuTitle] ? "submenu-open" : "submenu-closed"
+              }`}
+            >
+              {menuItems.map((item, index) => (
+                <li key={index}>
+                  <a href={item.href}>{item.title}</a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+        {/* Other menu items */}
+      </ul>
+    </div>
+  );
+}
+
+export default DropDownMenu;

@@ -13,7 +13,7 @@ interface Subgroup {
 
 const ThirdSection: React.FC<{ content: ThirdSectionData }> = ({ content }) => {
   return (
-    <div className="relative flex flex-col justify-center min-h-min px-20 py-20">
+    <div className="relative flex flex-col justify-center min-h-min px-8 md:px-20 py-20">
       <h2 className="text-center text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
         {content.title}
       </h2>

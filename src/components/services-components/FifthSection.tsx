@@ -10,9 +10,9 @@ interface Props {
 
 const FifthSection: React.FC<Props> = ({ content })  => {
   return (
-    <div className="relative flex flex-row justify-around  min-h-min px-20 py-20">
-      <div className="w-1/2 ">
-        <h2 className="  text-3xl text-left md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+    <div className="relative flex flex-col md:flex-row gap-10 justify-around md:text-left text-center items-center min-h-min md:px-8 px-8 py-20">
+      <div className="md:w-1/2 ">
+        <h2 className="  text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
           {content.title}
         </h2>
         <p className="py-2">

@@ -9,7 +9,7 @@ function Navbar({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "fixed md:block hidden bottom-10 right-[150px] max-w-xl mx-auto  z-[1000]  ",
+        "fixed md:block hidden bottom-10 right-[150px] max-w-xl mx-auto rounded-full bg-black bg-opacity-50 z-[1000]  ",
         className
       )}
     >
@@ -55,18 +55,18 @@ function Navbar({ className }: { className?: string }) {
             <HoveredLink href="/services/market-research-analysis">
               Market Research and Analysis
             </HoveredLink>
-            <HoveredLink href="/web-dev">Audience Building</HoveredLink>
-            <HoveredLink href="/web-dev">90 Days MVP Development</HoveredLink>
-            <HoveredLink href="/web-dev">
+            <HoveredLink href="/services/audience-building">Audience Building</HoveredLink>
+            <HoveredLink href="/services/90-day-mvp">90 Days MVP Development</HoveredLink>
+            <HoveredLink href="/services/ui-ux-design-and-prototyping">
               UI/UX Design & Prototyping
             </HoveredLink>
-            <HoveredLink href="/web-dev">
+            <HoveredLink href="/services/platform-technology-migration">
               Platform Technology Migration
             </HoveredLink>
-            <HoveredLink href="/web-dev">Product Marketing Setup</HoveredLink>
-            <HoveredLink href="/web-dev">Web Development</HoveredLink>
-            <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-            <HoveredLink href="/branding">Branding</HoveredLink>
+            <HoveredLink href="/services/product-marketing-setup">Product Marketing Setup</HoveredLink>
+            <HoveredLink href="/services/web-development">Web Development</HoveredLink>
+            <HoveredLink href="/services/search-engine-optimization">Search Engine Optimization</HoveredLink>
+            <HoveredLink href="/services/branding">Branding</HoveredLink>
           </div>
         </MenuItem>
         </Link>
