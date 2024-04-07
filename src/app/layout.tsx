@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from '@/components/Navbar'
+import Navbar from "@/components/Navbar";
 import UniLogo from "@/components/ui/NavSingleContainer";
+import Image from "next/image";
+import HamburgerMenu from "@/components/ui/HamburgerMenu";
+import HamBurgerIcon from "@/components/MobileNavMenu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,9 +23,17 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={inter.className}>
         <div className="relative w-full flex items-center "></div>
-      <Navbar/>
-      <UniLogo redirect="/"><img src="./uni-logo.svg" alt=""  style={{height:"24px"}}/></UniLogo>
-        {children}</body>
+        <Navbar />
+        <HamBurgerIcon/>
+        
+        
+        <UniLogo redirect="/">
+          <Image src="/uni-logo.svg" alt="uni-logo" height={24} width={24} />
+        </UniLogo>
+
+
+        {children}
+      </body>
     </html>
   );
 }

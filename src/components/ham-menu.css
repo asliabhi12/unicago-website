@@ -1,0 +1,15 @@
+.submenu-open {
+    opacity: 1;
+    visibility: visible;
+    max-height: 1000px; /* Adjust this value based on your submenu's content height */
+    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0s linear 0s;
+  }
+  
+  .submenu-closed {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0s linear 0.3s;
+  }
+  

@@ -2,10 +2,8 @@
 
 import { Spotlight } from "./ui/Spotlight";
 
-
 function Mission() {
   return (
-    
     <div className="h-auto md:h-[40rem] w-full rounded-md flex flex-col items-center justify-center relative  mx-auto py-10 md:py-0">
       <Spotlight
         fill="white"
@@ -16,15 +14,14 @@ function Mission() {
           Our Mission
         </h1>
         <p className="mt-4 font-normal text-base md:text-lg text-neutral-300 max-w-lg mx-auto">
-          At Unicago, we're driven by a simple yet powerful mission: to create
-          technology that feels natural and improves lives. Our products are
-          designed to reconnect us with ourselves, bring us closer together, and
-          foster trust and joy in every interaction. We believe that everyone
-          deserves technology that makes life better.
+          At Unicago, we&apos;re driven by a simple yet powerful mission: to
+          create technology that feels natural and improves lives. Our products
+          are designed to reconnect us with ourselves, bring us closer together,
+          and foster trust and joy in every interaction. We believe that
+          everyone deserves technology that makes life better.
         </p>
       </div>
     </div>
-
   );
 }
 

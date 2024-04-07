@@ -8,7 +8,10 @@ function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   return (
     <div
-      className={cn("fixed hidden sm:flex bottom-10 right-[150px] max-w-xl mx-auto  z-50  ", className)}
+      className={cn(
+        "fixed md:block hidden bottom-10 right-[150px] max-w-xl mx-auto rounded-full bg-black bg-opacity-50 z-[1000]  ",
+        className
+      )}
     >
       <Menu setActive={setActive}>
         <Link href={"/mission"}>
@@ -46,6 +49,27 @@ function Navbar({ className }: { className?: string }) {
             />
           </div>
         </MenuItem>
+        <Link href={"/services"}>
+        <MenuItem setActive={setActive} active={active} item="Services">
+          <div className="flex flex-col space-y-4 text-sm">
+            <HoveredLink href="/services/market-research-analysis">
+              Market Research and Analysis
+            </HoveredLink>
+            <HoveredLink href="/services/audience-building">Audience Building</HoveredLink>
+            <HoveredLink href="/services/90-day-mvp">90 Days MVP Development</HoveredLink>
+            <HoveredLink href="/services/ui-ux-design-and-prototyping">
+              UI/UX Design & Prototyping
+            </HoveredLink>
+            <HoveredLink href="/services/platform-technology-migration">
+              Platform Technology Migration
+            </HoveredLink>
+            <HoveredLink href="/services/product-marketing-setup">Product Marketing Setup</HoveredLink>
+            <HoveredLink href="/services/web-development">Web Development</HoveredLink>
+            <HoveredLink href="/services/search-engine-optimization">Search Engine Optimization</HoveredLink>
+            <HoveredLink href="/services/branding">Branding</HoveredLink>
+          </div>
+        </MenuItem>
+        </Link>
         <Link href={"/contact"}>
           <MenuItem
             setActive={setActive}
@@ -60,13 +84,16 @@ function Navbar({ className }: { className?: string }) {
             item="Media"
           ></MenuItem>
         </Link>
-        <Link href={"/contact"}>
-          <MenuItem
-            setActive={setActive}
-            active={active}
-            item="Industries"
-          ></MenuItem>
-        </Link>
+
+        <MenuItem setActive={setActive} active={active} item="Industries">
+          <div className="flex flex-col space-y-4 text-sm">
+            <HoveredLink href="/web-dev">Fintech</HoveredLink>
+            <HoveredLink href="/web-dev">Healthcare</HoveredLink>
+            <HoveredLink href="/web-dev">Retail</HoveredLink>
+            <HoveredLink href="/web-dev">Insurance</HoveredLink>
+            <HoveredLink href="/web-dev">Oil and Gas</HoveredLink>
+          </div>
+        </MenuItem>
       </Menu>
     </div>
   );

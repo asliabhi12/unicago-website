@@ -1,0 +1,69 @@
+[
+    {
+      "title": "Mission",
+      "href": "/mission"
+    },
+    {
+      "title": "Products",
+      "submenu": [
+        {
+          "title": "Algochurn",
+          "href": "https://algochurn.com",
+          "src": "https://assets.aceternity.com/demos/algochurn.webp",
+          "description": "Prepare for tech interviews like never before."
+        },
+        {
+          "title": "Tailwind Master Kit",
+          "href": "https://tailwindmasterkit.com",
+          "src": "https://assets.aceternity.com/demos/tailwindmasterkit.webp",
+          "description": "Production ready Tailwind css components for your next project"
+        },
+        {
+          "title": "Moonbeam",
+          "href": "https://gomoonbeam.com",
+          "src": "https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png",
+          "description": "Never write from scratch again. Go from idea to blog in minutes."
+        },
+        {
+          "title": "Rogue",
+          "href": "https://userogue.com",
+          "src": "https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png",
+          "description": "Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+        }
+      ]
+    },
+    {
+      "title": "Services",
+      "href": "/services",
+      "submenu": [
+        { "title": "Market Research and Analysis", "href": "/services/market-research-analysis" },
+        { "title": "Audience Building", "href": "/services/audience-building" },
+        { "title": "90 Days MVP Development", "href": "/services/90-day-mvp" },
+        { "title": "UI/UX Design & Prototyping", "href": "/services/ui-ux-design-and-prototyping" },
+        { "title": "Platform Technology Migration", "href": "/services/platform-technology-migration" },
+        { "title": "Product Marketing Setup", "href": "/services/product-marketing-setup" },
+        { "title": "Web Development", "href": "/services/web-development" },
+        { "title": "Search Engine Optimization", "href": "/services/search-engine-optimization" },
+        { "title": "Branding", "href": "/services/branding" }
+      ]
+    },
+    {
+      "title": "Team",
+      "href": "/contact"
+    },
+    {
+      "title": "Media",
+      "href": "/contact"
+    },
+    {
+      "title": "Industries",
+      "submenu": [
+        { "title": "Fintech", "href": "/web-dev" },
+        { "title": "Healthcare", "href": "/web-dev" },
+        { "title": "Retail", "href": "/web-dev" },
+        { "title": "Insurance", "href": "/web-dev" },
+        { "title": "Oil and Gas", "href": "/web-dev" }
+      ]
+    }
+  ]
+  
