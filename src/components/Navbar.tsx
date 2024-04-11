@@ -24,28 +24,28 @@ function Navbar({ className }: { className?: string }) {
         <MenuItem setActive={setActive} active={active} item="Products">
           <div className="  text-sm grid grid-cols-2 gap-10 p-4">
             <ProductItem
-              title="Algochurn"
-              href="https://algochurn.com"
-              src="https://assets.aceternity.com/demos/algochurn.webp"
-              description="Prepare for tech interviews like never before."
+              title="Unicago Sense(1)"
+              href="/products/unisense-1"
+              src="/assets/products/unisense-1.png"
+              description="An Innovative product to redefine smartphone"
             />
             <ProductItem
-              title="Tailwind Master Kit"
+              title="Projekt MJ"
               href="https://tailwindmasterkit.com"
               src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
-              description="Production ready Tailwind css components for your next project"
+              description="AI Friend to mimic your loved ones"
             />
             <ProductItem
-              title="Moonbeam"
+              title="1For1"
               href="https://gomoonbeam.com"
               src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
-              description="Never write from scratch again. Go from idea to blog in minutes."
+              description="Blockchain based Identity management system"
             />
             <ProductItem
-              title="Rogue"
+              title="Homie"
               href="https://userogue.com"
               src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
-              description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+              description="Developer focused Browser homepage"
             />
           </div>
         </MenuItem>
@@ -70,7 +70,7 @@ function Navbar({ className }: { className?: string }) {
           </div>
         </MenuItem>
         </Link>
-        <Link href={"/contact"}>
+        {/* <Link href={"/contact"}>
           <MenuItem
             setActive={setActive}
             active={active}
@@ -83,7 +83,7 @@ function Navbar({ className }: { className?: string }) {
             active={active}
             item="Media"
           ></MenuItem>
-        </Link>
+        </Link> */}
 
         <MenuItem setActive={setActive} active={active} item="Industries">
           <div className="flex flex-col space-y-4 text-sm">

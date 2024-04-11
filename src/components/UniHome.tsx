@@ -7,7 +7,7 @@ const UniHome = () => {
     <div className="hero relative min-h-[100vh] min-w-[100vw] overflow-hidden">
       <div>
         <video autoPlay muted playsInline className="video-bg">
-          <source src="./Uni-home-2.mp4" type="video/mp4" />
+          <source src="/Uni-home-2.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
