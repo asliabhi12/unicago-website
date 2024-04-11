@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import UniLogo from "@/components/ui/NavSingleContainer";
 import Image from "next/image";
 import HamBurgerIcon from "@/components/MobileNavMenu";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +31,7 @@ export default function RootLayout({
 
 
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
