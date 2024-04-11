@@ -25,8 +25,8 @@ Unicago is an open-source project aimed at providing a centralized platform for 
 
 To get started with Unicago locally, follow these steps:
 
-1. **Clone the Repository:** `git clone https://github.com/yourusername/unicago.git`
-2. **Install Dependencies:** `cd unicage` then `npm install`
+1. **Clone the Repository:** `git clone [repository-name]`
+2. **Install Dependencies:** `cd unicago` then `npm install`
 3. **Run the Development Server:** `npm run dev`
 4. **Open Your Browser:** Visit `http://localhost:3000` to view the website locally.
 
